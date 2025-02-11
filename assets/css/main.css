@@ -3673,77 +3673,55 @@ body.is-preload #header:after {
 
 }
 
-/* Navigation Menu */
+/* Navigation Menu - Fixed Positioning */
 .nav-menu {
-	position: absolute;
-	top: -90px;
+	position: fixed;
+	/* Change from absolute to fixed */
+	top: -80px;
 	right: 120px;
 	z-index: 1000;
+	display: flex;
+	gap: 20px;
 }
 
+/* Dropdown Base Styles */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Dropdown Content - Hidden by Default */
+.dropdown-content {
+	display: none;
+	/* Ensure it's hidden by default */
+	position: absolute;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.9);
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 4px;
+	border-radius: 4px;
+	z-index: 1001;
+	/* Ensure it's above other elements */
+}
+
+/* Show dropdown content ONLY on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Hide dropdown content by default */
+.dropdown .dropdown-content {
+	display: none;
+}
+
+/* Navigation Link Styles */
 .nav-link {
 	color: white;
 	text-decoration: none;
 	font-size: 1.2em;
 	padding: 10px;
 	font-weight: bold;
-	/* Added this line to make text bold */
-}
-
-/* Dropdown styles */
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	right: 0;
-	background-color: rgba(255, 255, 255, 0.9);
-	min-width: 200px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	padding: 2px;
-	/* Reduced from 8px to 4px */
-	border-radius: 2px;
-}
-
-.dropdown-content p {
-	color: #333;
-	padding: 0px 8px;
-	margin: 0;
-	text-align: right;
-	font-size: 0.9em;
-	/* Adjust font size */
-	font-family: "Source Sans Pro", sans-serif;
-	/* Change font family */
-	font-weight: 400;
-	/* Adjust font weight */
-	letter-spacing: 0.5px;
-	/* Add slight letter spacing */
-}
-
-/* Optional: style for hover state */
-.dropdown-content p:hover {
-	background-color: #f1f1f1;
-	font-weight: 500;
-	/* Make text slightly bolder on hover */
-}
-
-.dropdown:hover .dropdown-content {
-	display: block;
-}
-
-.dropdown-content p:hover {
-	background-color: #f1f1f1;
-}
-
-/* Add spacing between dropdown menus */
-.nav-menu .dropdown {
-	margin-left: 20px;
-	display: inline-block;
-}
-
-.nav-menu .dropdown:first-child {
-	margin-left: 0;
+	white-space: nowrap;
+	/* Prevent text wrapping */
 }
