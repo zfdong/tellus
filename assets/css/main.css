@@ -3715,13 +3715,33 @@ body.is-preload #header:after {
 	display: none;
 }
 
-/* Navigation Link Styles */
+/* Navigation Link Styles (main menu items) */
 .nav-link {
 	color: white;
+	/* Keep this white for main menu items */
 	text-decoration: none;
 	font-size: 1.2em;
 	padding: 10px;
 	font-weight: bold;
 	white-space: nowrap;
-	/* Prevent text wrapping */
+}
+
+/* Dropdown Content Text Styles */
+.dropdown-content p {
+	color: #000000;
+	/* Changed to black */
+	padding: 0px 8px;
+	margin: 0;
+	text-align: right;
+	font-size: 0.9em;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+/* Optional: Style for hover state */
+.dropdown-content p:hover {
+	background-color: #f1f1f1;
+	color: #000000;
+	/* Ensure text stays black on hover */
 }
