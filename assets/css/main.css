@@ -3748,6 +3748,13 @@ body.is-preload #header:after {
 
 /* Add media query for smartphones */
 @media screen and (max-width: 736px) {
+
+	/* Increase mobile header height */
+	#header {
+		padding: 8em 3em 8em 3em;
+		/* Increased padding for mobile */
+	}
+
 	.nav-menu {
 		position: fixed;
 		top: 10px;
