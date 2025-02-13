@@ -3760,15 +3760,16 @@ body.is-preload #header:after {
 
 	/* Add logo positioning for mobile */
 	.logo-container {
-		position: relative;
+		position: fixed;
 		top: 40px;
+		left: 10px;
 		/* Adjust this value to move logo down */
 		margin-bottom: 20px;
 		/* Add space below logo */
 	}
 
 	.logo {
-		max-width: 80%;
+		max-width: 60%;
 		/* Make logo slightly smaller on mobile */
 		height: auto;
 	}
