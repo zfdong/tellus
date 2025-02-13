@@ -3757,9 +3757,9 @@ body.is-preload #header:after {
 
 	.nav-menu {
 		position: fixed;
-		top: 10px;
+		top: -100px;
 		/* Adjust position for mobile */
-		right: 10px;
+		right: 1px;
 		flex-direction: column;
 		/* Stack menu items vertically */
 		gap: 5px;
@@ -3768,15 +3768,15 @@ body.is-preload #header:after {
 	/* Add logo positioning for mobile */
 	.logo-container {
 		position: fixed;
-		top: 5px;
-		left: 5px;
+		top: -80px;
+		left: -160px;
 		/* Adjust this value to move logo down */
-		margin-bottom: 20px;
+		margin-bottom: 1px;
 		/* Add space below logo */
 	}
 
 	.logo {
-		max-width: 20%;
+		max-width: 30%;
 		/* Make logo slightly smaller on mobile */
 		height: auto;
 	}
@@ -3799,4 +3799,6 @@ body.is-preload #header:after {
 	.dropdown-content p {
 		font-size: 0.8em;
 	}
+
+
 }
