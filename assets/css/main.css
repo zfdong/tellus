@@ -3758,6 +3758,22 @@ body.is-preload #header:after {
 		gap: 5px;
 	}
 
+	/* Add logo positioning for mobile */
+	.logo-container {
+		position: relative;
+		top: 30px;
+		/* Adjust this value to move logo down */
+		margin-bottom: 40px;
+		/* Add space below logo */
+	}
+
+	.logo {
+		max-width: 80%;
+		/* Make logo slightly smaller on mobile */
+		height: auto;
+	}
+
+
 	.dropdown-content {
 		position: absolute;
 		right: 100%;
