@@ -3677,7 +3677,7 @@ body.is-preload #header:after {
 .nav-menu {
 	position: fixed;
 	/* Change from absolute to fixed */
-	top: -80px;
+	top: -90px;
 	right: 120px;
 	z-index: 1000;
 	display: flex;
@@ -3744,4 +3744,35 @@ body.is-preload #header:after {
 	background-color: #f1f1f1;
 	color: #000000;
 	/* Ensure text stays black on hover */
+}
+
+/* Add media query for smartphones */
+@media screen and (max-width: 736px) {
+	.nav-menu {
+		position: fixed;
+		top: 10px;
+		/* Adjust position for mobile */
+		right: 10px;
+		flex-direction: column;
+		/* Stack menu items vertically */
+		gap: 5px;
+	}
+
+	.dropdown-content {
+		position: absolute;
+		right: 100%;
+		/* Position dropdowns to the left of menu items */
+		top: 0;
+		min-width: 150px;
+		/* Slightly smaller width for mobile */
+	}
+
+	/* Optional: Adjust font sizes for mobile */
+	.nav-link {
+		font-size: 1em;
+	}
+
+	.dropdown-content p {
+		font-size: 0.8em;
+	}
 }
