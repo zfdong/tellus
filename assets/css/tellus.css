@@ -652,6 +652,241 @@ p {
 	padding: 2rem 0;
 }
 
+.insights-section {
+	background: var(--tellus-soft);
+}
+
+.insights-page-top {
+	background: #fbfcfb;
+	border-bottom: 1px solid var(--tellus-line);
+	padding: 1rem 2rem;
+}
+
+.insights-page-top .site-nav {
+	margin: 0 auto;
+	max-width: 1180px;
+}
+
+.nav-links a[aria-current="page"] {
+	color: var(--tellus-green);
+}
+
+.insights-page .insights-section {
+	padding-top: 4.5rem;
+}
+
+.insights-page-intro {
+	max-width: 900px;
+}
+
+.insights-page-intro h1 {
+	font-size: clamp(2rem, 3.5vw, 3.4rem);
+}
+
+.insight-article {
+	background: #fff;
+	border: 1px solid var(--tellus-line);
+	border-radius: 8px;
+	box-shadow: 0 22px 55px rgba(16, 32, 39, 0.08);
+	overflow: hidden;
+}
+
+.insight-header {
+	align-items: center;
+	background: linear-gradient(135deg, #102027 0%, #173b48 100%);
+	display: grid;
+	gap: clamp(2rem, 5vw, 5rem);
+	grid-template-columns: 1.15fr 0.85fr;
+	padding: clamp(1.7rem, 5vw, 4rem);
+}
+
+.insight-meta {
+	color: #8bc8bd;
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.insight-header h2 {
+	color: #fff;
+	font-size: clamp(1.8rem, 3vw, 3rem);
+	line-height: 1.08;
+	margin-bottom: 0.55em;
+}
+
+.insight-deck {
+	color: #c7d5d2;
+	font-size: 1.05rem;
+	line-height: 1.55;
+	margin: 0;
+}
+
+.shoreline-graphic {
+	background: linear-gradient(180deg, #bcd9df 0 44%, #e8d8ae 44% 100%);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 8px;
+	display: block;
+	height: 245px;
+	overflow: hidden;
+	position: relative;
+}
+
+.structure-icon {
+	color: var(--tellus-dark);
+	font-size: 3rem;
+	position: absolute;
+	right: 12%;
+	top: 21%;
+	z-index: 2;
+}
+
+.shoreline-year {
+	border-left: 3px dashed;
+	height: 58%;
+	position: absolute;
+	top: 42%;
+	transform: rotate(12deg);
+}
+
+.shoreline-year span {
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 4px;
+	font-size: 0.68rem;
+	font-weight: 700;
+	left: 0.45rem;
+	padding: 0.25rem 0.4rem;
+	position: absolute;
+	top: 1rem;
+	transform: rotate(-12deg);
+	line-height: 1.2;
+	min-width: 5.5rem;
+	text-align: center;
+}
+
+.year-now {
+	border-color: var(--tellus-green);
+	left: 26%;
+}
+
+.year-future {
+	border-color: #b55b3c;
+	left: 57%;
+}
+
+.year-future span {
+	left: -0.35rem;
+}
+
+.insight-body {
+	margin: 0 auto;
+	max-width: 900px;
+	padding: clamp(1.7rem, 5vw, 4.25rem);
+}
+
+.insight-body p,
+.insight-body li {
+	font-size: 1rem;
+	line-height: 1.72;
+}
+
+.insight-body a:not(.button) {
+	border-bottom: 1px solid rgba(25, 124, 104, 0.35);
+	color: var(--tellus-green);
+	font-weight: 600;
+}
+
+.article-lead {
+	color: var(--tellus-ink);
+	font-size: 1.16rem !important;
+}
+
+.insight-body > h3 {
+	color: var(--tellus-ink);
+	font-size: 1.35rem;
+	font-weight: 600;
+	margin: 2.3rem 0 0.75rem;
+}
+
+.assessment-grid {
+	display: grid;
+	gap: 0.8rem;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 2rem 0;
+}
+
+.assessment-grid div {
+	background: #f4f8f6;
+	border: 1px solid var(--tellus-line);
+	border-radius: 8px;
+	padding: 1.15rem;
+}
+
+.assessment-grid .icon {
+	color: var(--tellus-blue);
+	font-size: 1.15rem;
+}
+
+.assessment-grid h4 {
+	color: var(--tellus-ink);
+	font-size: 0.98rem;
+	font-weight: 600;
+	margin: 0.8rem 0 0.45rem;
+}
+
+.assessment-grid p {
+	font-size: 0.88rem;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.insight-body blockquote {
+	background: #eef5f2;
+	border-left: 4px solid var(--tellus-green);
+	color: var(--tellus-ink);
+	font-size: 1.2rem;
+	font-style: normal;
+	line-height: 1.55;
+	margin: 2rem 0;
+	padding: 1.35rem 1.5rem;
+}
+
+.article-checklist {
+	list-style: none;
+	margin: 0 0 2rem;
+	padding: 0;
+}
+
+.article-checklist li {
+	border-bottom: 1px solid var(--tellus-line);
+	padding: 0.65rem 0 0.65rem 1.65rem;
+	position: relative;
+}
+
+.article-checklist li:before {
+	color: var(--tellus-green);
+	content: "\2713";
+	font-weight: 700;
+	left: 0;
+	position: absolute;
+}
+
+.article-footer {
+	align-items: center;
+	border-top: 1px solid var(--tellus-line);
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: 1fr auto;
+	margin-top: 2.5rem;
+	padding-top: 1.5rem;
+}
+
+.article-footer p {
+	font-size: 0.82rem;
+	line-height: 1.5;
+	margin: 0;
+}
+
 .tech-strip {
 	background: var(--tellus-dark);
 	border-radius: 8px;
@@ -750,7 +985,9 @@ p {
 	.hero-grid,
 	.service-list article,
 	.founder-grid,
-	.contact-panel {
+	.contact-panel,
+	.insight-header,
+	.article-footer {
 		grid-template-columns: 1fr;
 	}
 
@@ -803,12 +1040,20 @@ p {
 		grid-template-columns: 1fr;
 	}
 
+	.assessment-grid {
+		grid-template-columns: 1fr;
+	}
+
 	.tellus-section {
 		padding: 4rem 0;
 	}
 }
 
 @media screen and (max-width: 620px) {
+	.insights-page-top {
+		padding: 1rem 1.1rem;
+	}
+
 	.site-nav {
 		display: block;
 	}
