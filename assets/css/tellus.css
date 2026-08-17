@@ -416,8 +416,15 @@ p {
 	border-bottom: 1px solid var(--tellus-line);
 	display: grid;
 	gap: 1.3rem;
-	grid-template-columns: 0.65fr 1fr 0.7fr;
+	grid-template-columns: 0.65fr 1fr 0.7fr auto;
 	padding: 1.45rem 0;
+}
+
+.service-list article > a {
+	color: var(--tellus-green);
+	font-size: 0.78rem;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 .service-list span {
@@ -683,12 +690,137 @@ p {
 	font-size: clamp(2rem, 3.5vw, 3.4rem);
 }
 
+.insights-timeline {
+	border-left: 2px solid var(--tellus-line);
+	display: grid;
+	gap: 0.45rem;
+	margin: 2.2rem 0 3rem 0.45rem;
+	max-width: 960px;
+	padding-left: 1.4rem;
+}
+
+.timeline-entry {
+	align-items: center;
+	border: 0;
+	color: var(--tellus-ink);
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 8rem 0 1fr;
+	padding: 0.8rem 0;
+}
+
+.timeline-entry:hover strong {
+	color: var(--tellus-green);
+}
+
+.timeline-entry time,
+.timeline-entry small {
+	color: #687b82;
+	font-size: 0.76rem;
+}
+
+.timeline-entry strong,
+.timeline-entry small {
+	display: block;
+}
+
+.timeline-entry strong {
+	font-size: 1rem;
+	line-height: 1.35;
+	transition: color 0.2s ease;
+}
+
+.timeline-entry small {
+	margin-top: 0.15rem;
+	text-transform: uppercase;
+}
+
+.timeline-dot {
+	background: var(--tellus-green);
+	border: 4px solid var(--tellus-soft);
+	border-radius: 50%;
+	height: 14px;
+	margin-left: -1.95rem;
+	width: 14px;
+}
+
+.insights-feed {
+	display: grid;
+	gap: 3.5rem;
+}
+
+.insight-card-grid, .detail-card-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.insight-card, .detail-card { background: #fff; border: 1px solid var(--tellus-line); border-radius: 8px; display: flex; flex-direction: column; padding: clamp(1.35rem, 3vw, 2rem); }
+.insight-card h2, .detail-card h2, .detail-card h3 { color: var(--tellus-ink); }
+.insight-card p, .detail-card p, .detail-card li { font-size: 0.95rem; line-height: 1.62; }
+.insight-card .insight-meta { color: var(--tellus-green); }
+.insight-card a, .detail-card a { color: var(--tellus-green); font-weight: 700; margin-top: auto; }
+.detail-hero { background: linear-gradient(135deg, #102027 0%, #173b48 100%); color: #c7d5d2; padding: clamp(3.5rem, 8vw, 7rem) 0; }
+.detail-hero .eyebrow { color: #8bc8bd; }
+.detail-hero h1 { color: #fff; max-width: 980px; }
+.detail-hero p:last-child { font-size: 1.08rem; line-height: 1.6; max-width: 800px; }
+.breadcrumb { color: #6f8288; font-size: 0.8rem; margin-bottom: 1.5rem; }
+.breadcrumb a, .author-box a { color: var(--tellus-green); }
+.author-box { align-items: center; background: #f4f8f6; border: 1px solid var(--tellus-line); border-radius: 8px; display: grid; gap: 1rem; grid-template-columns: 72px 1fr; margin: 2.5rem 0; padding: 1rem; }
+.author-box img { border-radius: 6px; height: 72px; object-fit: cover; width: 72px; }
+.author-box p { font-size: 0.88rem; line-height: 1.5; margin: 0; }
+.author-box a { font-weight: 700; }
+.section-anchor { scroll-margin-top: 2rem; }
+
 .insight-article {
 	background: #fff;
 	border: 1px solid var(--tellus-line);
 	border-radius: 8px;
 	box-shadow: 0 22px 55px rgba(16, 32, 39, 0.08);
 	overflow: hidden;
+}
+
+.insight-article[id] {
+	scroll-margin-top: 2rem;
+}
+
+.energy-insight-header {
+	background: linear-gradient(135deg, #102027 0%, #164c4a 58%, #197c68 100%);
+}
+
+.energy-network-graphic {
+	background: radial-gradient(circle at center, rgba(139, 200, 189, 0.22), transparent 52%), rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 8px;
+	display: grid;
+	gap: 1px;
+	grid-template-columns: repeat(2, 1fr);
+	overflow: hidden;
+	position: relative;
+}
+
+.energy-node {
+	align-items: center;
+	background: rgba(10, 30, 35, 0.46);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 0.55rem;
+	justify-content: center;
+	min-height: 118px;
+	padding: 1rem;
+	text-align: center;
+}
+
+.energy-node .icon {
+	color: #8bc8bd;
+	font-size: 1.5rem;
+}
+
+.energy-node strong {
+	color: #fff;
+	font-size: 0.82rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.energy-capability-grid div {
+	background: #f1f8f4;
 }
 
 .insight-header {
@@ -708,6 +840,7 @@ p {
 	text-transform: uppercase;
 }
 
+.insight-header h1,
 .insight-header h2 {
 	color: #fff;
 	font-size: clamp(1.8rem, 3vw, 3rem);
@@ -1040,8 +1173,14 @@ p {
 		grid-template-columns: 1fr;
 	}
 
+	.insight-card-grid, .detail-card-grid { grid-template-columns: 1fr; }
+
 	.assessment-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.timeline-entry {
+		grid-template-columns: 7rem 0 1fr;
 	}
 
 	.tellus-section {
@@ -1065,6 +1204,20 @@ p {
 	.nav-links {
 		justify-content: flex-start;
 		margin-top: 1rem;
+	}
+
+	.timeline-entry {
+		align-items: start;
+		gap: 0.6rem;
+		grid-template-columns: 0 1fr;
+	}
+
+	.timeline-entry time {
+		grid-column: 2;
+	}
+
+	.timeline-entry > span:last-child {
+		grid-column: 2;
 	}
 
 	h1 {
