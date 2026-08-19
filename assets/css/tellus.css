@@ -562,10 +562,88 @@ p {
 	padding-bottom: 4rem;
 }
 
+.partner-carousel {
+	--partner-visible: 4;
+	--partner-gap: 0.9rem;
+	align-items: center;
+	display: flex;
+	gap: 0.65rem;
+}
+
+.partner-viewport {
+	flex: 1;
+	min-width: 0;
+}
+
+.partner-carousel.is-ready .partner-viewport {
+	overflow: hidden;
+}
+
+.partner-nav {
+	align-items: center;
+	background: #fff !important;
+	border: 1px solid var(--tellus-line) !important;
+	border-radius: 50%;
+	box-shadow: none;
+	color: var(--tellus-ink) !important;
+	display: none;
+	flex: 0 0 2.6rem;
+	height: 2.6rem;
+	justify-content: center;
+	letter-spacing: 0;
+	line-height: 1;
+	padding: 0;
+	text-indent: 0;
+	text-transform: none;
+	width: 2.6rem;
+}
+
+.partner-nav .icon {
+	display: block;
+	font-size: 0.95rem;
+	line-height: 1;
+}
+
+.partner-nav .icon:before {
+	line-height: 1;
+}
+
+.partner-nav:hover,
+.partner-nav:focus {
+	background: rgba(25, 124, 104, 0.08) !important;
+	color: var(--tellus-green) !important;
+}
+
+.partner-nav:focus-visible {
+	outline: 2px solid var(--tellus-green);
+	outline-offset: 3px;
+}
+
+.partner-nav:disabled {
+	cursor: default;
+	opacity: 0.35;
+}
+
+.partner-nav:disabled:hover,
+.partner-nav:disabled:focus {
+	background: #fff !important;
+	color: var(--tellus-ink) !important;
+}
+
+.partner-carousel.is-ready:not(.is-static) .partner-nav {
+	display: inline-flex;
+}
+
 .partner-logos {
-	display: grid;
-	gap: 0.9rem;
-	grid-template-columns: repeat(4, 1fr);
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--partner-gap);
+}
+
+.partner-carousel.is-ready .partner-logos {
+	flex-wrap: nowrap;
+	transition: transform 0.4s ease;
+	width: 100%;
 }
 
 .partner-logos span {
@@ -582,8 +660,20 @@ p {
 	line-height: 1.15;
 	min-height: 7rem;
 	padding: 1rem;
+	flex: 1 1 calc((100% - (var(--partner-visible) - 1) * var(--partner-gap)) / var(--partner-visible));
+	min-width: 0;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+.partner-carousel.is-ready .partner-logos span {
+	flex: 0 0 calc((100% - (var(--partner-visible) - 1) * var(--partner-gap)) / var(--partner-visible));
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.partner-carousel.is-ready .partner-logos {
+		transition: none;
+	}
 }
 
 .partner-logos span > a {
@@ -1129,9 +1219,12 @@ p {
 	}
 
 	.pain-grid,
-	.use-case-grid,
-	.partner-logos {
+	.use-case-grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.partner-carousel {
+		--partner-visible: 2;
 	}
 
 	.founder-image {
@@ -1263,9 +1356,12 @@ p {
 	.pain-grid,
 	.use-case-grid,
 	.credential-grid,
-	.partner-logos,
 	.metric-strip {
 		grid-template-columns: 1fr;
+	}
+
+	.partner-carousel {
+		--partner-visible: 1;
 	}
 
 	.metric-strip div + div {

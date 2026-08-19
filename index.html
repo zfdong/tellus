@@ -17,11 +17,13 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Tellus" />
 	<meta property="og:title" content="Tellus | Geospatial Automation and Workflow Modernization" />
-	<meta property="og:description" content="Production GIS tools, spatial data pipelines, scientific-code modernization, and practical AI systems for technical teams." />
+	<meta property="og:description"
+		content="Production GIS tools, spatial data pipelines, scientific-code modernization, and practical AI systems for technical teams." />
 	<meta property="og:url" content="https://www.tellusai.com/" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Tellus | Geospatial Automation" />
-	<meta name="twitter:description" content="Modern geospatial, engineering, and applied AI systems for technical teams." />
+	<meta name="twitter:description"
+		content="Modern geospatial, engineering, and applied AI systems for technical teams." />
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
@@ -37,7 +39,7 @@
 	}
 	</script>
 	<link rel="stylesheet" href="assets/css/main.css?v=20260813" />
-	<link rel="stylesheet" href="assets/css/tellus.css?v=20260817c" />
+	<link rel="stylesheet" href="assets/css/tellus.css?v=20260819" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css?v=20260813" />
 	</noscript>
@@ -284,29 +286,44 @@
 		<div class="container">
 			<div class="section-intro compact">
 				<p class="eyebrow">Clients and partners</p>
-				<h2>Trusted experience across engineering, government, geospatial, and cloud ecosystems.</h2>
+				<h2>Trusted experience across engineering, government, geospatial, AI and cloud ecosystems.</h2>
 			</div>
-			<div class="partner-logos" aria-label="Client and partner organizations">
-				<span>
-					<a href="https://www.erdc.usace.army.mil/" target="_blank" rel="noopener noreferrer">
-						<img src="images/erdc_logo.png" alt="ERDC" />
-					</a>
-				</span>
-				<span>
-					<a href="https://jalbtcx.usace.army.mil/" target="_blank" rel="noopener noreferrer">
-						<img src="images/iatlas_logo.png" alt="I-ATLAS" />
-					</a>
-				</span>
-				<span>
-					<a href="https://www.woolpert.com/" target="_blank" rel="noopener noreferrer">
-						<img src="images/woolpert_logo.png" alt="Woolpert" />
-					</a>
-				</span>
-				<span>
-					<a href="https://earthengine.google.com/" target="_blank" rel="noopener noreferrer">
-						<img src="images/earth_engine_logo.png" alt="Google Earth Engine" />
-					</a>
-				</span>
+			<div class="partner-carousel">
+				<button type="button" class="partner-nav prev" aria-controls="partner-logos" aria-label="Show previous partners">
+					<span class="icon solid fa-chevron-left" aria-hidden="true"></span>
+				</button>
+				<div class="partner-viewport">
+					<div class="partner-logos" id="partner-logos" aria-label="Client and partner organizations">
+						<span>
+							<a href="https://claude.com/partners/" target="_blank" rel="noopener noreferrer">
+								<img src="images/claude_partner_network.png" alt="Claude" />
+							</a>
+						</span>
+						<span>
+							<a href="https://www.erdc.usace.army.mil/" target="_blank" rel="noopener noreferrer">
+								<img src="images/erdc_logo.png" alt="ERDC" />
+							</a>
+						</span>
+						<span>
+							<a href="https://jalbtcx.usace.army.mil/" target="_blank" rel="noopener noreferrer">
+								<img src="images/iatlas_logo.png" alt="I-ATLAS" />
+							</a>
+						</span>
+						<span>
+							<a href="https://www.woolpert.com/" target="_blank" rel="noopener noreferrer">
+								<img src="images/woolpert_logo.png" alt="Woolpert" />
+							</a>
+						</span>
+						<span>
+							<a href="https://earthengine.google.com/" target="_blank" rel="noopener noreferrer">
+								<img src="images/earth_engine_logo.png" alt="Google Earth Engine" />
+							</a>
+						</span>
+					</div>
+				</div>
+				<button type="button" class="partner-nav next" aria-controls="partner-logos" aria-label="Show next partners">
+					<span class="icon solid fa-chevron-right" aria-hidden="true"></span>
+				</button>
 			</div>
 		</div>
 	</section>
@@ -406,7 +423,7 @@
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="assets/js/main.js?v=20260819"></script>
 
 </body>
 
